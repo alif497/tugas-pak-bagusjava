@@ -1,0 +1,247 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    min-height: 100%;
+    background-color: #808080;
+}
+
+body {
+    background-color: #808080;
+    color: #111111;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body,
+body * {
+    transition-property: background-color, color, border-color, box-shadow;
+    transition-duration: 0.3s;
+}
+
+.main-card {
+    background-color: #ffffff;
+    color: #111111;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 28px;
+    padding: 30px;
+    border: 2px solid #d0d0d0;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.top-menu {
+    background-color: #f0f0f0;
+    color: #111111;
+    border: 1px solid #d0d0d0;
+    border-radius: 50px;
+    padding: 10px 15px 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.menu-pilih {
+    font-size: 16px;
+    font-weight: 700;
+    color: inherit;
+    letter-spacing: 0.5px;
+}
+
+.menu-kanan {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.time {
+    background-color: #dddddd;
+    color: #007777;
+    padding: 4px 6px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.tombol-mode {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    border: 1px solid #cccccc;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #222222;
+    font-size: 17px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tombol-mode:hover {
+    transform: rotate(15deg) scale(1.08);
+}
+
+.test {
+    color: #111111;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.gambar {
+    display: block;
+    margin: 0 auto 30px auto;
+    width: 195px;
+    height: 195px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #dddddd;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.menu-item {
+    width: 100%;
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background-color: #eeeeee;
+    border: 1px solid #d0d0d0;
+    border-radius: 40px;
+    color: #222222;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.menu-item:hover {
+    background-color: #dddddd;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-color: #007777;
+}
+
+.icon {
+    font-size: 22px;
+}
+
+
+html:has(body.gelap) {
+    background-color: #808080;
+}
+
+body.gelap {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+body.gelap .main-card {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #2a2e37;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+body.gelap .top-menu {
+    background-color: #161920;
+    color: #ffffff;
+    border-color: #30353d;
+}
+
+body.gelap .menu-pilih {
+    color: #ffffff;
+}
+
+body.gelap .time {
+    background-color: #252a34;
+    color: #00ffff;
+}
+
+body.gelap .tombol-mode {
+    background-color: #333333;
+    color: #ffffff;
+    border-color: #444444;
+}
+
+body.gelap .test {
+    color: #ffffff;
+}
+
+body.gelap .gambar {
+    border-color: #ffffff;
+}
+
+body.gelap .menu-item {
+    background-color: #1b1e24;
+    color: #f4eded;
+    border-color: #30353d;
+}
+
+body.gelap .menu-item:hover {
+    background-color: #252a34;
+    border-color: #00ffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+@media (max-width: 500px) {
+    body {
+        padding: 12px;
+    }
+
+    .main-card {
+        padding: 18px 14px;
+        border-radius: 22px;
+    }
+
+    .menu-pilih {
+        font-size: 12px;
+    }
+
+    .top-menu {
+        padding: 9px 10px;
+    }
+
+    .time {
+        font-size: 12px;
+    }
+
+    .test {
+        font-size: 21px;
+    }
+
+    .gambar {
+        width: 150px;
+        height: 150px;
+    }
+
+    .menu-item {
+        min-height: 62px;
+        font-size: 17px;
+    }
+
+    .icon {
+        font-size: 19px;
+    }
+}
