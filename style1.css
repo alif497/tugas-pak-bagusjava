@@ -22,7 +22,7 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-body,
+
 body * {
     transition-property: background-color, color, border-color, box-shadow;
     transition-duration: 0.3s;
@@ -244,4 +244,25 @@ body.gelap .menu-item:hover {
     .icon {
         font-size: 19px;
     }
+}
+
+.contact-card{
+    display:inline-flex ;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+}
+.contact-card img {
+    width: 0 auto;
+    height: 50px;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+.social-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
